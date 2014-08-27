@@ -1,10 +1,14 @@
 {
-  "name": "otter",
+  "name": "otter-routes",
   "version": "0.9.1",
-  "description": "Directory convention based Express Route builder",
+  "description": "Directory convention based ExpressJS route builder",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/jonathanlarsen/node-otter-routes"
   },
   "keywords": [
     "Express",

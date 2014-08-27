@@ -1,0 +1,23 @@
+{
+  "name": "otter",
+  "version": "0.9.1",
+  "description": "Directory convention based Express Route builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "Router",
+    "Route",
+    "Conventional"
+  ],
+  "author": "Jonathan Larsen",
+  "license": "MIT",
+  "dependencies": {
+    "path": "~0.4.9",
+    "findit": "~2.0.0",
+    "lodash": "~2.4.1",
+    "function-name": "0.0.3"
+  }
+}

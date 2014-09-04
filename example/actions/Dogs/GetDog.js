@@ -1,3 +1,3 @@
 module.exports = function GetDog(req, res) {
-    res.json({message: 'GetDog ' + req.params.id});
+    res.json({message: 'GetDog, id: ' + req.params.id});
 };

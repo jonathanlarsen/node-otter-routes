@@ -15,8 +15,13 @@ var config = {
         "post": "post",
         "delete": "delete"
     },
-    "fileMatchersForId": ["get","edit","put","update","delete"]
+    "fileMatchersForId": ["get","edit","put","update","delete"],
+    "modules": ["Dogs"],
+    "routeParamMatchers": {
+        id: /^\d+$/i
+    }
 };
+
 
 otter(app, config.directory, config, function() {
     app.listen(8000, function() {

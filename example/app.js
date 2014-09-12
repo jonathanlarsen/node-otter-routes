@@ -8,6 +8,7 @@ var config = {
     "diagnostics": true,
     "methods": {
         "get": "get",
+        "add": "get",
         "list": "get",
         "edit": "get",
         "add": "get",
@@ -16,13 +17,13 @@ var config = {
         "delete": "delete"
     },
     "fileMatchersForId": ["get","edit","put","update","delete"],
-    "modules": ["Dogs"],
+    "modules": ["Aggregates"],
     "routeParamMatchers": {
         id: /^\d+$/i
     }
 };
 
-
+app.menu = {};
 otter(app, config.directory, config, function() {
     app.listen(8000, function() {
         console.log('app listening on port 8000');

@@ -11,16 +11,12 @@ var config = {
         "add": "get",
         "list": "get",
         "edit": "get",
-        "add": "get",
         "put": "put",
         "post": "post",
         "delete": "delete"
     },
-    "fileMatchersForId": ["get","edit","put","update","delete"],
-    "modules": ["UrlOverride"],
-    "routeParamMatchers": {
-        id: /^\d+$/i
-    }
+    "fileMatchersForId": ["get","edit","put","delete"],
+    "modules": ["Dogs"]
 };
 
 app.menu = {};

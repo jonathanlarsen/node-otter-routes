@@ -17,7 +17,7 @@ var config = {
         "delete": "delete"
     },
     "fileMatchersForId": ["get","edit","put","update","delete"],
-    "modules": ["Aggregates"],
+    "modules": ["UrlOverride"],
     "routeParamMatchers": {
         id: /^\d+$/i
     }

@@ -15,8 +15,7 @@ var config = {
         "post": "post",
         "delete": "delete"
     },
-    "fileMatchersForId": ["get","edit","put","delete"],
-    "modules": ["Dogs"]
+    "fileMatchersForId": ["get","edit","put","delete"]
 };
 
 app.menu = {};

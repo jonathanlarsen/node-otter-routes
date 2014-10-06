@@ -18,6 +18,14 @@ var config = {
     "fileMatchersForId": ["get","edit","put","delete"]
 };
 
+//config.permissionMiddleware = function auth(req, res, next) {
+//    if (req.query.dog === 'dog') {
+//        next();
+//    } else {
+//        next(new Error('Unauthorized'));
+//    }
+//};
+
 app.menu = {};
 otter(app, config.directory, config, function() {
     app.listen(8000, function() {

@@ -1,6 +1,6 @@
 {
   "name": "otter-routes",
-  "version": "0.9.13",
+  "version": "0.9.14",
   "description": "Directory convention based ExpressJS route builder",
   "main": "index.js",
   "scripts": {

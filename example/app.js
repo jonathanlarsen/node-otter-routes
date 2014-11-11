@@ -28,7 +28,6 @@ var config = {
 
 app.menu = {};
 otter(app, config.directory, config, function() {
-//    console.log(app.menu);
     console.log(app._otterRoutes);
     app.listen(8000, function() {
         console.log('app listening on port 8000');

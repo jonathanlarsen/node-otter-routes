@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jonathanlarsen/node-otter-routes",
   "dependencies": {
+    "express": "^4.11.2",
     "lodash": "~2.4.1",
     "otter-walker": "^1.0.0",
     "path": "~0.4.9"

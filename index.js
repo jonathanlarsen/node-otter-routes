@@ -1,1 +1,1 @@
-exports = module.exports = require('./lib/otter');
+module.exports = require('./lib/otter');

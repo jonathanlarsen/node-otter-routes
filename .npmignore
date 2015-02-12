@@ -30,3 +30,4 @@ node_modules
 .idea
 example
 test
+.travis.yml

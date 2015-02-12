@@ -43,8 +43,8 @@ describe('Otter Routes', function () {
             server.close(done);
         });
 
-        it('should have 17 routes', function () {
-            assert.equal(otterResults.routes.length, 17);
+        it('should have 20 routes', function () {
+            assert.equal(otterResults.routes.length, 20);
         });
 
         it("should return app.get('/basic')", function (done) {
@@ -176,6 +176,27 @@ describe('Otter Routes', function () {
         it("should have added permission name to menu item", function() {
             var menuItem = otterResults.menu[1];
             assert.equal(menuItem.permission, 'admin');
+        });
+
+        it("should return app.get('/customexportfunction/nested')", function (done) {
+            request.get(api + '/customexportfunction/nested', function (err, response, body) {
+                assert.equal(body, "app.get('/customexportfunction/nested')");
+                done();
+            });
+        });
+
+        it("should return app.get('/customexportfunction/nested/custom')", function (done) {
+            request.get(api + '/customexportfunction/nested/custom', function (err, response, body) {
+                assert.equal(body, "app.get('/customexportfunction/nested/custom')");
+                done();
+            });
+        });
+
+        it("should return app.get('/customexportfunction/nested/custom2')", function (done) {
+            request.get(api + '/customexportfunction/nested/custom2', function (err, response, body) {
+                assert.equal(body, "app.get('/customexportfunction/nested/custom2')");
+                done();
+            });
         });
     });
 

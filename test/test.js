@@ -103,7 +103,7 @@ describe('Otter Routes', function () {
             });
         });
 
-        it("should return app.get('/nested/" + randParentId + "/sub", function (done) {
+        it("should return app.get('/nested/" + randParentId + "/sub')", function (done) {
             request.get(api + '/nested/' + randParentId + '/sub', function (err, response, body) {
                 assert.equal(body, "app.get('/nested/" + randParentId + "/sub')");
                 done();
@@ -240,14 +240,14 @@ describe('Otter Routes', function () {
             });
         });
 
-        it("should return app.get('/nested/" + randParentId + "/sub/" + randId, function (done) {
+        it("should return app.get('/nested/" + randParentId + "/sub/" + randId + "')", function (done) {
             request.get(api + '/nested/' + randParentId + '/sub/' + randId, function (err, response, body) {
                 assert.equal(body, "app.get('/nested/" + randParentId + "/sub/" + randId + "')");
                 done();
             });
         });
 
-        it("should return app.put('/nested/sub/" + randId, function (done) {
+        it("should return app.put('/nested/sub/" + randId + "')", function (done) {
             request.put(api + '/nested/sub/' + randId, function (err, response, body) {
                 assert.equal(body, "app.put('/nested/sub/" + randId + "')");
                 done();

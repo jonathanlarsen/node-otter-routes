@@ -378,4 +378,40 @@ describe('Otter Routes', function () {
             });
         });
     });
+
+    describe('custom id regex', function () {
+        var otterResults, server,
+            app = express(),
+            config = {
+                directory: path.resolve('./example/controllers/customIdParamRegex'),
+                methods: {'get': 'get' },
+                idParamMatchers: ['get'],
+                idParamRegexMatch: '[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$'
+            };
+
+        before(function (done) {
+            otter(app, config, function (err, results) {
+                otterResults = results;
+                server = app.listen(port, done);
+            });
+        });
+
+        after(function (done) {
+            server.close(done);
+        });
+
+        it("should return app.get('/basic/A9526723-C3BC-4A36-ADF8-9AC7CBDCEE52([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$)", function (done) {
+            request.get(api + '/basic/A9526723-C3BC-4A36-ADF8-9AC7CBDCEE52', function (err, response, body) {
+                assert.equal(body, "app.get('/basic/A9526723-C3BC-4A36-ADF8-9AC7CBDCEE52([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$)");
+                done();
+            });
+        });
+
+        it("should match lowercase app.get('/basic/a9526723-c3bc-4a36-adf8-9ac7cbdcee52([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$)", function (done) {
+            request.get(api + '/basic/a9526723-c3bc-4a36-adf8-9ac7cbdcee52', function (err, response, body) {
+                assert.equal(body, "app.get('/basic/a9526723-c3bc-4a36-adf8-9ac7cbdcee52([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$)");
+                done();
+            });
+        });
+    });
 });

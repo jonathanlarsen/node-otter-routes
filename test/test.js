@@ -140,6 +140,13 @@ describe('Otter Routes', function () {
             });
         });
 
+        it ("should return app.get('/domyownthing')", function(done) {
+            request.get(api + '/domyownthing', function(err, response, body) {
+                assert.equal(body, "app.get('/domyownthing')");
+                done();
+            });
+        });
+
         it ("should return app.get('/customexportfunction')", function(done) {
             request.get(api + '/customexportfunction', function(err, response, body) {
                 assert.equal(body, "app.get('/customexportfunction')");

@@ -1,5 +1,5 @@
-exports.urlPattern = '/customurl';
+exports.urlPattern = '/domyownthing';
 
 exports.controller = function GetCustomUrl(req, res) {
-    res.send("app.get('/customurl')");
+    res.send("app.get('/domyownthing')");
 };

@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-   "repository": {
-     "type": "git",
-     "url": "https://github.com/jonathanlarsen/node-otter-routes"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanlarsen/node-otter-routes"
   },
   "keywords": [
     "Express",
@@ -19,9 +19,9 @@
   "author": "Jonathan Larsen",
   "license": "MIT",
   "dependencies": {
-    "path": "~0.4.9",
     "findit": "~2.0.0",
+    "function-name": "^1.0.0",
     "lodash": "~2.4.1",
-    "function-name": "0.0.3"
+    "path": "~0.4.9"
   }
 }

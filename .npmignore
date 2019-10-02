@@ -25,6 +25,9 @@ build/Release
 node_modules
 
 # Users Environment Variables
-.idea
 .lock-wscript
-.vscode
+
+.idea
+example
+test
+.travis.yml

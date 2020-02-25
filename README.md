@@ -82,7 +82,7 @@ var config = {
     verb.
     List will map to get, with no parameters
     View will map to get, with /:id parameter
-    Update will map to get, with /:id parameter
+    Update will map to put, with /:id parameter
     Create will map to post, with no parameters
     Destroy will map to delete, with /:id parameter
 */
